@@ -1,0 +1,97 @@
+@use "../../styles/partials/fonts" as *;
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+
+.header {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @include tablet {
+      padding: 0 2rem;
+    }
+    @include desktop {
+      padding: 0 9rem;
+    }
+    &__container {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      @include tablet {
+        display: flex;
+        flex-direction: row;
+      }
+    }
+  
+    &__form {
+      width: 100%;
+      @include tablet {
+        gap: 1.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+      }
+    }
+    &__input {
+      @include button;
+      width: 100%;
+      font-size: 0.813rem;
+      padding: 0.5rem 2rem;
+      border: 1px solid $Mercury;
+      background-color: $Alablaster;
+      background-image: url(../../assets/Icons/search.svg);
+      @include tablet {
+        width: 15rem;
+        height: 2.5rem;
+      }
+    } 
+    &__wrapper {
+      padding: 1rem 0;
+      gap: 0.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    &__avatar {
+      @include avatar;
+      @include tablet {
+        display: none;
+      }
+      &-2 {
+        display: none;
+        @include tablet{
+          display: inline-block;
+          @include avatar;
+        }
+        
+      }
+    }
+    &__btn {
+      @include button;
+      height: 2.5rem;
+      width: 100%;
+      color: $White;
+      font-weight: 600;
+      text-align: center;
+      text-decoration: none;
+      text-transform: uppercase;
+      border: none;
+      background-color: $BrainFlix-blue;
+      background-image: url(../../assets/Icons/upload.svg);
+      background-size: 1.3rem;
+      cursor: pointer;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      @include tablet {
+        width: 27%;
+      }
+      @include desktop {
+        width: 9rem;
+      }
+      &:hover {
+        background-color: $BrainFlix-DarkBlue;
+      }
+    }
+  }

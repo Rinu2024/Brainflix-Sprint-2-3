@@ -1,0 +1,17 @@
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/fonts" as *;
+
+.main-video {
+    height: 60vh;
+    object-fit: cover;
+    @include tablet {
+      padding: 0 2rem;
+      height: 70vh;
+      background: $BrainFlix-DarkBlack;
+    }
+    @include desktop {
+      height: 80vh;
+      padding: 0 13.5rem;
+    }
+  }

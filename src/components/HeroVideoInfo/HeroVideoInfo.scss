@@ -1,0 +1,114 @@
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/fonts" as *;
+
+.main-info {
+  @include tablet {
+    padding: 0 1rem;
+  }
+  @include desktop {
+    padding: 0;
+  }
+    &__header {
+      padding: 1rem 0;
+      margin: 0 1rem;
+      line-height: 2rem;
+      font-size: 1.5rem;
+      font-weight: 600;
+      border-bottom: solid 1px $Mercury;
+      @include tablet {
+        font-size: 2.063rem;
+        font-weight: 700;
+        border: none;
+      }
+      @include desktop {
+        margin: 0;
+      }
+    }
+    &__container {
+      display: flex;
+      justify-content: space-between;
+      padding: 1rem 0;
+      margin: 0 1rem;
+      @include tablet {
+        justify-content: space-between;
+        border-bottom: solid 1px $Mercury;
+        padding-bottom: 0.5rem;
+        margin: 0 1rem;
+      }
+      @include desktop {
+        margin: 0;
+        padding-right: 2rem;
+      }
+    }
+    &__channel-date {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      @include tablet {
+        flex-direction: row;
+        gap: 2rem;
+      }
+    }
+    &__item {
+      color: $Silver;
+      width: auto;
+      @include tablet {
+        margin: 0;
+      }
+      &--bold {
+        color: black;
+        font-weight: bold;
+      }
+    }
+    &__wrapper {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      margin-right: 4rem;
+      @include tablet {
+        flex-direction: row;
+        margin: 0;
+        gap: 1rem;
+      }
+    }
+    &__date {
+      color: $Silver;
+    }
+    &__views {
+      background: url(../../assets/Icons/views.svg);
+      background-position: 0% 60%;
+      background-repeat: no-repeat;
+      padding-left: 2rem;
+      color: $Silver;
+
+    }
+    &__likes {
+      background: url(../../assets/Icons/likes.svg);
+      background-position: 0% 60%;
+      background-repeat: no-repeat;
+      padding-left: 2rem;
+      color: $Silver;
+      @include tablet {
+        padding-left: 1.5rem;
+      }
+    }
+    
+    &__description {
+      padding: 1rem 0;
+      margin: 0 1rem;
+      border-top: solid 1px $Mercury; 
+      @include tablet {
+        padding: 2rem;
+        border: none;
+        margin: 0;
+      }
+      @include desktop {
+        padding: 2rem 1rem 2rem 0;
+      }
+    &__comment {
+    padding-top: 1rem;
+    font-weight: bold;
+  }
+    }
+  }

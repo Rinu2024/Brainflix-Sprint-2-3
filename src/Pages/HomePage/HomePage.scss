@@ -1,0 +1,59 @@
+@use '../../styles/partials/mixins' as *;
+@use '../../styles/partials/variables' as *;
+@use '../../styles/partials/fonts' as *;
+
+.app-container {
+    @include desktop {
+      display: flex;
+      margin: 0 8.6rem;
+    }
+  }
+  
+  .app-wrapper {
+    @include desktop {
+      width: 70%;
+      border-right: 1px solid $Mercury;
+    }
+    
+  }
+  
+  .conversation {
+    gap: 1rem;
+    padding: 0 1rem 1rem;
+    display: flex;
+    justify-content: center;
+    &__box {
+      height: 6rem;
+      width: 100%;
+      padding: 0.5rem;
+      margin: 0.5rem 0;
+      color: $BrainFlix-Black;
+      font-family: "Avenir Next";
+      resize: none;
+      border-radius: 4px;
+      border: solid 2px $Mercury;
+    }
+    &__title {
+      color: $Silver;
+      text-transform: uppercase;
+      font-size: 0.75rem;
+      font-weight: 600;
+    }
+    &__avatar {
+      @include avatar;
+      margin-top: 1rem;
+    }
+    &__button {
+      @include button;
+      height: 2rem;
+      width: 100%;
+      color: $White;
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      border: none;
+      border-radius: 4px;
+      background-size: 1.2rem;
+      background-image: url(../../assets/Icons/add_comment.svg);
+      background-color: $BrainFlix-blue;
+    }
+  }

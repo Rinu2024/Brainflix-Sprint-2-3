@@ -1,0 +1,79 @@
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/variables" as *;
+
+.conversation {
+    font-weight: 600;
+    justify-content: flex-start;
+    @include tablet {
+        padding: 0 2rem;
+    }
+    @include desktop {
+        padding: 0;
+    }
+    &__item {
+        display: flex;
+        gap: 1rem;
+        padding-bottom: 0.5rem;
+        padding: 0.5rem 0;
+        border-bottom: 1px solid $Mercury;
+        &:first-child {
+            border-top: 1px solid $Mercury;
+        }
+        &:last-child {
+            @include desktop {
+                border: none;
+            }
+        }
+    }
+    &__delete-btn {
+        width: 3rem;
+        border-radius: 4px;
+        padding: 1rem 0;
+        color: $White;
+        text-transform: uppercase;
+        border: 2px solid $BrainFlix-DarkBlue;
+        background-color: $BrainFlix-blue;
+        cursor: pointer;
+        &-vertical {
+            writing-mode: vertical-lr;
+            text-orientation: upright;
+        }
+        &:hover {
+            background-color: $BrainFlix-DarkBlue;
+            font-weight: bolder;
+        }
+    }
+    &__comment {
+        @include desktop {
+            padding: 0 2rem;
+        }
+    }
+    &__comment-avatar {
+        @include avatar;
+        margin-top: 1rem;
+    }
+    &__container {
+        width: 100%;
+        padding: 0.5rem 0;
+        display: flex;
+        flex-direction: column;
+        @include desktop {
+            padding: 1.3rem 0;
+        }
+    }
+    &__name-date {
+        padding: 0.5rem 0;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        @include desktop {
+            padding: 0 2rem;
+        }
+    }
+    &__name {
+        font-weight: 600;
+    }
+    &__date {
+        color: $Silver;
+    }
+}

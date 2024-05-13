@@ -1,0 +1,24 @@
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/fonts" as *;
+
+.video {
+    padding: 0 1rem;
+    @include tablet {
+        padding: 0 2rem;
+    }
+    @include desktop {
+        padding: 0 1rem;
+    }
+    &__header {
+        color: $Silver;
+        font-size: 0.9rem;
+        margin-bottom: 1.5rem;
+        text-transform: uppercase;
+        @include tablet {
+            font-size: 0.8rem;
+            font-weight: 600;
+            padding-top: 1rem;
+        }
+    }
+}

@@ -1,0 +1,33 @@
+@use 'variables';
+
+@mixin tablet {
+    @media (min-width: variables.$tablet-breakpoint) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media (min-width: variables.$desktop-breakpoint) {
+        @content;
+    }
+}
+
+@mixin avatar {
+    height: 2.5rem;
+    width: 2.5rem;
+    border-radius: 50%;
+    object-fit:cover;
+    object-position: left;
+}
+
+@mixin main-info-logo {
+    color: $Silver;
+    padding-left: 2rem;
+    background-repeat: no-repeat;
+}
+
+@mixin button {
+    border-radius: 0.3rem;
+    background-position: 5px center;
+    background-repeat: no-repeat;
+}

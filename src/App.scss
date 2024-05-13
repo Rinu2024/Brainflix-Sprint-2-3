@@ -1,0 +1,43 @@
+@use './styles/partials/mixins' as *;
+@use './styles/partials/variables' as *;
+@use './styles/partials/fonts' as *;
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-size: 0.813rem;
+  line-height: 1.125rem;
+  font-family: "Avenir Next";
+  overflow: auto;
+  @include tablet {
+    line-height: 1.375rem;
+    font-size: 0.875rem;
+  }
+}
+
+h1 {
+  color: $BrainFlix-Black;
+  font-weight: 600;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  @include tablet {
+    font-size: 2rem;
+    font-weight: 700;
+  }
+}
+
+ul {
+  list-style: none;
+}
+video {
+  width: 100%;
+}
+::placeholder {
+  color: $BrainFlix-DarkBlack;
+}
+
+
