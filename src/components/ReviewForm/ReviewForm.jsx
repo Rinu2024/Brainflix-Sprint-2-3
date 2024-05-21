@@ -6,7 +6,7 @@ function CommentForm({commentNum, handleOnSubmit}) {
 
   const [comment, setComment] = useState("");
 
-  //clear text field and prevent default behaviour after submitting
+  //clear text field and avoid default behaviour after submitting
   const handleSubmit = (event) => {
     event.preventDefault();
     handleOnSubmit(event)
